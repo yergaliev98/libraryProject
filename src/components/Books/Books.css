@@ -1,0 +1,114 @@
+.books__columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.books__title {
+  margin:40px 0;  
+}
+
+.books__bottomline {
+  padding: 5px;
+  border-bottom: rgba(27,27,27,0.05) solid 3px;
+
+}
+
+.books__bottomline--orange {
+  border-bottom: orange solid 3px;
+}
+
+.books__elem {
+  width: calc(100%/4 - 2%);
+}
+
+.books__img__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.img__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: ease-in-out .5s;
+}
+
+.books__img__background:hover > .img__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+
+.books__img__background:hover > .books__img {
+  transform: scale(1.1);
+}
+
+.books__img__background:hover > .img__icons {
+  animation: iconsIn .5s alternate forwards;
+}
+
+.books__img {
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out .5s;
+  object-fit: contain;
+}
+
+.img__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: iconsOut .5s alternate forwards;
+}
+
+.img__item {
+  color:white;
+  margin-left: 20px;
+  padding:15px;
+  background-color: #f3701d;
+  border-radius: 50%;
+  transition: ease-in-out .3s;
+}
+
+.img__item:hover {
+  background-color:red;
+}
+
+.books__money {
+  color: #f3701d;
+  font-weight: 700;
+}
+
+.books__description {
+  font-weight: 300;
+}
+
+@keyframes iconsIn {
+  from {
+      transform: scale(.9);
+  }
+  to {
+       transform: scale(1.3);
+       opacity: 1;
+  }
+}
+
+@keyframes iconsOut {
+  from {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(.9);
+    opacity: 0;
+  }
+}
+

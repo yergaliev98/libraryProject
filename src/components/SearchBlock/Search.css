@@ -1,0 +1,36 @@
+.searchblock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__item { 
+    width: 90%;
+    padding: 5px;        
+    letter-spacing: .5px;
+    font-size: 15px;
+    border: none;    
+    border-bottom: 3px solid #9F9F9F; 
+    background: black;  
+    outline: none;
+    color: #fff;        
+  }
+
+.searchblock--search {
+    background-color: black;
+    width: 65%;
+    height: 150px;
+}
+
+.searchblock--date {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
+  width:35%;
+  height: 150px;
+  background: url('/src/components/SearchBlock/background-img2.webp') center no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-size: 20px;
+}
+
