@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./Header.css";
 import logo from './logo.webp';
 
 function Header() {
-  let isAuth = false;
+  const [isAuth,setIsAuth] = useState(false);
+  
+  const changeAuth = () => {
+    setIsAuth(!isAuth);
+  }
 
   return (
     <div className="headerblock">
@@ -11,7 +15,7 @@ function Header() {
           <img src={logo} alt="logo" className="logo__item"/>
         </div>
         <div className="signIn">
-            <button className="signIn__item" >{isAuth ? "Beka" : "Sign in"}</button>
+            <button className="signIn__item" onClick={changeAuth}>{isAuth ? "Beka" : "Sign in"}</button>
         </div>
       <div className="navblock">
         <nav>

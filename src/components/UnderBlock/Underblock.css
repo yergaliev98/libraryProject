@@ -4,10 +4,10 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  z-index: -2;
   height: 400px;
   display: flex;
   align-items: flex-end;
+  z-index: 0;
 }
 
 .underblock__overlay {
@@ -17,13 +17,26 @@
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,0.4);
-  z-index: -1;
+  z-index:1;
+  transition: background-color .3s linear;
+  cursor: grab;
+}
+
+.underblock__overlay:hover {
+  background-color:rgba(0,0,0,0.7);
 }
 
 .underblock__title {
   width: 800px;
   padding-left: 40px;
-  padding-bottom: 20px;
+  z-index: 2;
+  cursor: pointer;
+  margin:0;
+  padding-bottom: 40px;
+}
+
+.underblock__title:hover .underblock__title__link {
+  color:#f3701d;
 }
 
 .underblock__title__link {
@@ -32,4 +45,6 @@
   font-size:70px;
   text-decoration: none;
   font-family: "Roboto Slab",sans-serif;
+  transition:color .3s linear;
 }
+
